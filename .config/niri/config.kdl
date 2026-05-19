@@ -157,6 +157,7 @@ overview {
     }
 }
 // Add lines like this to spawn processes at startup.
+spawn-at-startup "fcitx5"
 // Note that running niri as a session supports xdg-desktop-autostart,
 // which may be more convenient to use.
 // See the binds section below for more spawn examples.
