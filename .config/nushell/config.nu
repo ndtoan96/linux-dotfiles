@@ -25,6 +25,7 @@ source ($nu.default-config-dir | path join carapace.nu)
 $env.config.edit_mode = "vi"
 $env.config.rm.always_trash = true
 $env.config.show_banner = false
+# $env.config.shell_integration."osc9_9" = true
 
 def --env y [...args] {
 	let tmp = (mktemp -t "yazi-cwd.XXXXXX")
