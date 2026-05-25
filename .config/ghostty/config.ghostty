@@ -1,0 +1,4 @@
+command = mise exec -- nu
+background-opacity = 0.85
+keybind = ctrl+shift+z=jump_to_prompt:-1
+keybind = ctrl+shift+x=jump_to_prompt:1
