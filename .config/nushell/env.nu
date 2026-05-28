@@ -17,7 +17,7 @@
 # You can remove these comments if you want or leave
 # them for future reference.
 $env.EDITOR = "hx"
-$env.PATH ++= ['~/.puro/bin', '~/.puro/shared/pub_cache/bin', '~/.puro/envs/default/flutter/bin']
+$env.PATH ++= ['~/.puro/bin', '~/.puro/shared/pub_cache/bin', '~/.puro/envs/default/flutter/bin', '.local/bin']
 $env.PURO_ROOT = "~/.puro" | path expand
 
 let mise_path = $nu.default-config-dir | path join mise.nu
