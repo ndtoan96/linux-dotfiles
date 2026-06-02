@@ -17,7 +17,7 @@
     }
 
     window-rule {
-        match app-id="firefox"
+        match app-id="(firefox|brave)"
         open-maximized true
     }
 
