@@ -126,7 +126,7 @@ binds {
     Print { screenshot; }
     XF86Launch1 { screenshot; }
     Mod+Shift+E { quit; }
-    Mod+T hotkey-overlay-title="Open Terminal" { spawn "ghostty"; }
+    Mod+Return hotkey-overlay-title="Open Terminal" { spawn "ghostty"; }
     Super+B hotkey-overlay-title="Open browser" { spawn "brave"; }
     Super+E hotkey-overlay-title="Open File Manager" { spawn "nautilus"; }
     Mod+D repeat=false { toggle-overview; }

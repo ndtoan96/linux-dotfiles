@@ -203,6 +203,7 @@ debug {
     honor-xdg-activation-with-invalid-serial
 }
 
+
 // Include dms files
 include "dms/colors.kdl"
 include "dms/layout.kdl"
