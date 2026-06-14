@@ -19,6 +19,7 @@
 $env.EDITOR = "hx"
 $env.PATH ++= ['~/.puro/bin', '~/.puro/shared/pub_cache/bin', '~/.puro/envs/default/flutter/bin', '.local/bin']
 $env.PURO_ROOT = "~/.puro" | path expand
+$env.CHROME_EXECUTABLE = '/usr/bin/brave'
 
 let mise_path = $nu.default-config-dir | path join mise.nu
 ^mise activate nu | save -f $mise_path
