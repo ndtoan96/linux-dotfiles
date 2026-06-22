@@ -158,6 +158,7 @@ overview {
 // which may be more convenient to use.
 // See the binds section below for more spawn examples.
 // This line starts waybar, a commonly used bar for Wayland compositors.
+spawn-at-startup "waypaper" "--restore"
 environment {
   XDG_CURRENT_DESKTOP "niri"
 }
@@ -261,14 +262,14 @@ debug {
 }
 
 // Override to disable super+tab
-recent-windows {
-    binds {
-        Alt+Tab         { next-window scope="output"; }
-        Alt+Shift+Tab   { previous-window scope="output"; }
-        Alt+grave       { next-window filter="app-id"; }
-        Alt+Shift+grave { previous-window filter="app-id"; }
-    }
-}
+// recent-windows {
+//     binds {
+//         Alt+Tab         { next-window scope="all"; }
+//         Alt+Shift+Tab   { previous-window scope="all"; }
+//         Alt+grave       { next-window filter="app-id"; }
+//         Alt+Shift+grave { previous-window filter="app-id"; }
+//     }
+// }
 
 // Include dms files
 include "dms/colors.kdl"
