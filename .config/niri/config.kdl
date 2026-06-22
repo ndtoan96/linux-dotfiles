@@ -161,6 +161,7 @@ overview {
 spawn-at-startup "waypaper" "--restore"
 environment {
   XDG_CURRENT_DESKTOP "niri"
+  XDG_MENU_PREFIX "plasma-"
 }
 hotkey-overlay {
     skip-at-startup
