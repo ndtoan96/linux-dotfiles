@@ -12,7 +12,7 @@ binds {
     Mod+Return                          hotkey-overlay-title="Open Terminal: Alacritty" { spawn "alacritty"; }
     Mod+CTRL+Return                     hotkey-overlay-title="Open App Launcher: noctalia launcher" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
     Mod+B                               hotkey-overlay-title="Open Browser: firefox" { spawn "firefox"; }
-    Mod+ALT+L                           hotkey-overlay-title="Lock Screen: noctalia lock" { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
+    Mod+ALT+L                           hotkey-overlay-title="Lock Screen: noctalia lock" { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock && sleep 10s && niri msg action power-off-monitors"; }
     Mod+Shift+Q                         hotkey-overlay-title="Session Menu: noctalia sessionMenu" { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
     Mod+V                               hotkey-overlay-title="Clipboard history" { spawn-sh "qs -c noctalia-shell ipc call launcher clipboard"; }
 
@@ -79,6 +79,11 @@ binds {
     Mod+BracketRight                    {consume-or-expel-window-right;}
 
     // ─── Workspace Switching ───
+    Mod+U                               { focus-workspace-down; }
+    Mod+I                               { focus-workspace-up; }
+    Mod+Ctrl+U                          { move-column-to-workspace-down; }
+    Mod+Ctrl+I                          { move-column-to-workspace-up; }
+
     Mod+WheelScrollDown                 cooldown-ms=150 { focus-workspace-down; }
     Mod+WheelScrollUp                   cooldown-ms=150 { focus-workspace-up; }
     Mod+CTRL+WheelScrollDown            cooldown-ms=150 { move-column-to-workspace-down; }
@@ -94,10 +99,6 @@ binds {
     Mod+CTRL+Shift+WheelScrollDown      { move-column-right; }
     Mod+CTRL+Shift+WheelScrollUp        { move-column-left; }
 
-    Mod+U                               { focus-workspace-down; }
-    Mod+I                               { focus-workspace-up; }
-    Mod+Ctrl+U                          { move-column-to-workspace-down; }
-    Mod+Ctrl+I                          { move-column-to-workspace-up; }
 
     Mod+1                               { focus-workspace 1; }
     Mod+2                               { focus-workspace 2; }
