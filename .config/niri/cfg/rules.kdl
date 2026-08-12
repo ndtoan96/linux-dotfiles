@@ -3,7 +3,22 @@
         clip-to-geometry true
     }
 
-     // if you use steam you will probably like these
+    window-rule {
+        background-effect {
+          blur true
+          xray false
+        }
+    }
+
+    // Floating Noctalia settings window.
+    window-rule {
+        match app-id="dev.noctalia.Noctalia"
+        open-floating true
+        default-column-width { fixed 1080; }
+        default-window-height { fixed 920; }
+    }
+
+    // if you use steam you will probably like these
     window-rule {
         match app-id="steam"
         exclude title=r#"^[Ss]team$"#
@@ -17,17 +32,25 @@
     }
 
     window-rule {
-        match app-id="firefox"
+        match app-id="(firefox|zen)"
         open-maximized true
     }
 
     window-rule {
-        match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+        match app-id=r#"(firefox|zen)$"# title="^Picture-in-Picture$"
         match app-id="zoom"
         open-floating true
     }
 
     layer-rule {
-        match namespace="^noctalia-wallpaper*"
+        match namespace="^noctalia-wallpaper"
         place-within-backdrop true
+    }
+
+    layer-rule {
+        match namespace="^noctalia-(bar-[^\"]+|notification|dock|panel|attached-panel|osd)$"
+        background-effect {
+          xray false
+          // blur false
+        }
     }
